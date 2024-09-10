@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Vibrant gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.todo-app {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.todo-app h2::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: #007aff; /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #005ecb; /* Darker button color on hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px; /* Spacing between items */
+    background-color: #e7e7e7; /* Light grey background for items */
+    border-radius: 5px;
+    transition: background 0.3s;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+ul li:last-child {
+    margin-bottom: 0; /* No margin for the last item */
+}
+
+ul li:hover {
+    background-color: #d0d0d0; /* Darker grey on hover */
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: #aaa;
+    background-color: #c0c0c0; /* Different background for checked items */
+}
+
+ul li span {
+    cursor: pointer;
+    color: #ff3b30; /* Red color for delete button */
+    font-weight: bold;
+    margin-left: 10px;
+}
